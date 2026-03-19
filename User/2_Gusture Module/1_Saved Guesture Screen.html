@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gesture Module - My Gestures</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a227f",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121320",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark min-h-screen font-display text-slate-900 dark:text-slate-100">
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center h-16 gap-8">
+                <!-- Logo Section -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined">gesture</span>
+                    </div>
+                    <span class="text-xl font-bold text-primary dark:text-white tracking-tight">GestureAuto</span>
+                </div>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-8">
+                    <a class="text-slate-500 hover:text-primary dark:hover:text-white px-1 py-2 text-sm font-medium transition-colors"
+                        href="E:\Workspace\All Projects\New UI Project\My Project\GuestureAuto\User\1_Dashboard and Profile\User Dashboard Screen.html">Dashboard</a>
+                    <a class="text-primary dark:text-white border-b-2 border-primary px-1 py-2 text-sm font-semibold"
+                        href="">My Gestures</a>
+                    <a class="text-slate-500 hover:text-primary dark:hover:text-white px-1 py-2 text-sm font-medium transition-colors"
+                        href="E:\Workspace\All Projects\New UI Project\My Project\GuestureAuto\User\2_Gusture Module\2_Guesture Scan Screen.html">Sample Scan</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Sub-navigation / Breadcrumbs -->
+    <div class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        <div
+            class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Saved Gestures</h1>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Manage and optimize your custom hand gesture
+                    library.</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+                    <input
+                        class="pl-9 pr-4 py-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary focus:border-transparent text-sm w-full md:w-64"
+                        placeholder="Search gestures..." type="text" />
+                </div>
+                <button
+                    class="flex items-center justify-center p-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 hover:bg-slate-50 transition-colors">
+                    <span class="material-symbols-outlined text-slate-600 dark:text-slate-300">filter_list</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content Area -->
+    <main class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-32">
+        <!-- Gesture Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Gesture Card 1 -->
+            <div
+                class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200 dark:border-slate-800">
+                <div class="relative aspect-video overflow-hidden bg-slate-100 dark:bg-slate-800">
+                    <img alt="Open Palm Gesture"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-alt="An open human palm facing forward against a plain background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA4CN3Q8ef5jKEWO79Fx-eWYPeptMov-Bi18wpJTJpqtuCUuQHN5d1Nh7X3RcB5PBB59_fVa7UZPjp9adTOv62489n1W4u3zJdcmvBFnLQmiW-QP6u7Q8eoUEbSxdVJhSDAbd3xE25N_y6sl1wvuiU4YMYD8xjTt5NJNHfJNU0kir28MVfsC4BJ9hbnJo6zIvIJrUS26Li517J7d9tqDCzv4sbuzFn_7A_MLteYaJfQE-tyEU7yUW1E8LUGohvKThHAfz2KLI4H2hr" />
+                    <div
+                        class="absolute top-3 right-3 bg-green-500/90 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
+                        Active
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg leading-none">Open Palm</h3>
+                        <div
+                            class="flex items-center text-primary font-semibold text-xs bg-primary/10 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-sm mr-1">check_circle</span>
+                            98.4%
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-1">Used for 'Stop' or 'Pause'
+                        commands.</p>
+                    <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
+                        <span class="text-[10px] text-slate-400 font-medium uppercase tracking-widest">Last modified 2d
+                            ago</span>
+                        <div class="flex gap-2">
+                            <button
+                                class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-400 transition-colors">
+                                <span class="material-symbols-outlined text-xl">edit</span>
+                            </button>
+                            <button
+                                class="p-2 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg text-slate-600 dark:text-slate-400 hover:text-red-600 transition-colors">
+                                <span class="material-symbols-outlined text-xl">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Gesture Card 2 -->
+            <div
+                class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200 dark:border-slate-800">
+                <div class="relative aspect-video overflow-hidden bg-slate-100 dark:bg-slate-800">
+                    <img alt="Victory Sign Gesture"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Hand showing the V victory sign with two fingers up"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPkA79OHFxZMSbRRskX7e7NjOauL96eTPRJKssYciwSvUp5KaFzVqECvIzPuucTfewmoPxqFTM_iu2a9wdHYS0OVsWR10SFwx_Sx9v6SXdXU0pSOgcHLk4W5aKuyjbOHSnxLz_CfOGLNt_yXP_U1xPYqWmRJE060FW3xpP-Pmpg3JunIA61O88L5rk_X_n-JODSzs-WgEhWw9TWaWq-jIZ2jB32WDFsqeejx0qQyuK0UDtn7qcRcev0T157ohe8kfIMpM1F3wcYuNK" />
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg leading-none">Victory Sign</h3>
+                        <div
+                            class="flex items-center text-primary font-semibold text-xs bg-primary/10 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-sm mr-1">check_circle</span>
+                            95.2%
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-1">Configured for application
+                        switching.</p>
+                    <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
+                        <span class="text-[10px] text-slate-400 font-medium uppercase tracking-widest">Last modified 5d
+                            ago</span>
+                        <div class="flex gap-2">
+                            <button
+                                class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-400 transition-colors">
+                                <span class="material-symbols-outlined text-xl">edit</span>
+                            </button>
+                            <button
+                                class="p-2 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg text-slate-600 dark:text-slate-400 hover:text-red-600 transition-colors">
+                                <span class="material-symbols-outlined text-xl">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Gesture Card 3 -->
+            <div
+                class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200 dark:border-slate-800">
+                <div class="relative aspect-video overflow-hidden bg-slate-100 dark:bg-slate-800">
+                    <img alt="Thumbs Up Gesture"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Close up of a human hand giving a thumbs up gesture"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEzMOKTQTtc1gxEZHLw2L13YGuM60_OpJBFBbJXWMXPI-Asr0cbwKreANvHzx8WxIvoxSH5efmJWnvRVmx6CDxP6dk4v1HjDg40xtdxRhIQ9x6x7XTzO8nHhxQt07P4z8ZFRljsrfxtuh6AakD8IaT26L5mvrVnxWUKf_QqMN7u1XJaKFcUQJXOomAoLrxUuEWOjse4sRvUFMzGfqEhOf160RR9ROpYuAnBhbaLnS7rZvCQwi7sX_P4JxFuIL3-gvC-DKhF9MoMnn0" />
+                    <div
+                        class="absolute top-3 right-3 bg-green-500/90 text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">
+                        Active
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg leading-none">Thumbs Up</h3>
+                        <div
+                            class="flex items-center text-primary font-semibold text-xs bg-primary/10 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-sm mr-1">check_circle</span>
+                            99.1%
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-1">Used for 'Confirm' or 'OK'
+                        actions.</p>
+                    <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
+                        <span class="text-[10px] text-slate-400 font-medium uppercase tracking-widest">Last modified 1w
+                            ago</span>
+                        <div class="flex gap-2">
+                            <button
+                                class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-400 transition-colors">
+                                <span class="material-symbols-outlined text-xl">edit</span>
+                            </button>
+                            <button
+                                class="p-2 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg text-slate-600 dark:text-slate-400 hover:text-red-600 transition-colors">
+                                <span class="material-symbols-outlined text-xl">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Gesture Card 4 -->
+            <div
+                class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-slate-200 dark:border-slate-800">
+                <div class="relative aspect-video overflow-hidden bg-slate-100 dark:bg-slate-800">
+                    <img alt="Pinch Zoom Gesture"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        data-alt="Two fingers coming together in a pinching motion"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6IJmJr_xYUjV5iTH6KXV15X3XgegH6J22HV4mcfxM7UPeEIcQOwTEl_i8Yq-HS7MzKaofH3oOZqzhf05lOlt4qbfGRbYjOLP0R0iactwYMP3Ce-LN4O5PzTd5jtY_3cEHLWJ_7EKJCaCQdj3eyKLNOryqA27TLCKis7LNcNvIeTA6vmulghp6ql3bSNIfccnqt0XbN11A1RcKejwWh8kRRov9ispvTBzwRxt75yYCZdYXIUdv5xM3GOtHAaCrVsqjPaN65jf_woLO" />
+                </div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-slate-900 dark:text-white text-lg leading-none">Pinch Zoom</h3>
+                        <div
+                            class="flex items-center text-primary font-semibold text-xs bg-primary/10 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-sm mr-1">check_circle</span>
+                            92.8%
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-1">Multi-touch emulation for
+                        image scaling.</p>
+                    <div class="flex items-center justify-between border-t border-slate-100 dark:border-slate-800 pt-3">
+                        <span class="text-[10px] text-slate-400 font-medium uppercase tracking-widest">Last modified 3w
+                            ago</span>
+                        <div class="flex gap-2">
+                            <button
+                                class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-400 transition-colors">
+                                <span class="material-symbols-outlined text-xl">edit</span>
+                            </button>
+                            <button
+                                class="p-2 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg text-slate-600 dark:text-slate-400 hover:text-red-600 transition-colors">
+                                <span class="material-symbols-outlined text-xl">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Empty/Add New State Card -->
+            <div
+                class="border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl flex flex-col items-center justify-center p-8 bg-slate-50/50 dark:bg-slate-800/20 hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors cursor-pointer group">
+                <div
+                    class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors mb-4">
+                    <span class="material-symbols-outlined text-3xl">add</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-300 font-semibold">New Training Sample</p>
+                <p class="text-xs text-slate-400 text-center mt-2">Click to start capturing a new gesture pattern</p>
+            </div>
+        </div>
+    </main>
+    <!-- Floating Action Button (FAB) -->
+    <div class="fixed bottom-8 right-8 z-[60]">
+        <button
+            class="group flex items-center gap-3 bg-primary text-white pl-4 pr-6 py-4 rounded-full shadow-lg shadow-primary/30 hover:shadow-xl hover:scale-105 transition-all duration-300 active:scale-95">
+            <span class="material-symbols-outlined text-2xl">add_a_photo</span>
+            <span class="font-bold tracking-wide whitespace-nowrap">Capture New Gesture</span>
+        </button>
+    </div>
+
+</body>
+
+</html>

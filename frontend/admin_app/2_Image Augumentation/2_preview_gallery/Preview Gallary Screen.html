@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Preview Gallery</title>
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a227f",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121320",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 font-display min-h-screen">
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-3 text-primary">
+                    <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined text-xl">layers</span>
+                    </div>
+                    <h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">GuestureAuto</h1>
+                </div>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="#">Dashboard</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors border-b-2 border-primary pb-1 pt-1"
+                        href="#">Dataset Hub</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Model
+                        Training</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">User
+                        Management</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="#">Deployments</a>
+
+                </nav>
+            </div>
+            <!-- Actions & Profile -->
+            <div class="flex items-center gap-4">
+                <div class="h-8 w-px bg-slate-200 dark:bg-slate-700"></div>
+                <div class="flex items-center gap-3 ml-2 cursor-pointer group">
+                    <div class="size-9 rounded-full bg-slate-200 overflow-hidden border border-slate-200">
+                        <img alt="Profile" class="w-full h-full object-cover"
+                            data-alt="Portrait of a professional ML researcher"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTt8V4eQVjA9lvtEpDuQDkLU10eshiSR3m167zH__Z9n_2MCcie4BjvKARyDFOl-a8rofCvSoYhL40vMoFt0FmxCXozXN2B7TjOu4044VOxIex560sfML5uOZ85-xu8k85rpTW5Sp-4OXlrsMnPd_vee6TkT-fBCJEWP-jlVIjnuIyZXyKFluKF3oNXzKFYiir4Xdk_l4L7MLHNVPA_YQYrN4IRRJGp9uiTvuaAyuhw-Iw_7vwux0WxOe6ttjn8HbJQZx0qxpsRMRM" />
+                    </div>
+                    <div class="hidden lg:block text-left leading-tight">
+                        <p
+                            class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                            Dr. Aris Thorne</p>
+                        <p class="text-xs text-slate-500">Admin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-[1440px] mx-auto p-6 space-y-6">
+        <!-- Header & Tabs -->
+        <div class="mb-8">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Augmentation Preview</h2>
+            </div>
+
+            <!-- Integrated Toggle Tabs -->
+            <div class="border-b border-slate-200 dark:border-slate-800">
+                <nav aria-label="Tabs" class="flex gap-8">
+                    <a class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-slate-500 flex items-center gap-2"
+                        href="E:\Workspace\All Projects\v2\My Project\Screens\stitch\Admin\2_Image Augumentation\1_dataset_overview\Dataset Overview Screen.html">
+                        <span class="material-symbols-outlined text-lg">dashboard</span>Dataset Overview </a>
+
+                    <a class="border-b-2 border-primary py-4 px-1 text-sm font-bold text-primary hover:text-slate-700 hover:border-slate-300 flex items-center gap-2"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">photo_library</span>Priview Gallary</a>
+
+                    <a class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-slate-500 flex items-center gap-2"
+                        href="E:\Workspace\All Projects\v2\My Project\Screens\stitch\Admin\2_Image Augumentation\3_batch_augmentation\Batch Augumentation Screen.html">
+                        <span class="material-symbols-outlined text-lg">monitoring</span>Augumentation</a>
+                </nav>
+            </div>
+        </div>
+        <!-- Header & Filter Bar -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-8">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Guesture Variations</h2>
+                <p class="text-slate-500 text-sm mt-1">Inspecting 1,240 augmented variations from 'Hand Gestures'
+                    dataset</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <div
+                    class="flex items-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-1.5 gap-2">
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Gesture:</span>
+                    <select class="bg-transparent border-none text-sm p-50 focus:ring-0 font-medium">
+                        <option>All Classes</option>
+                        <option>Thumbs Up</option>
+                        <option>Open Palm</option>
+                        <option>Point Left</option>
+                    </select>
+                </div>
+                <div
+                    class="flex items-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-1.5 gap-2">
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Type:</span>
+                    <select class="bg-transparent border-none text-sm p-50 focus:ring-0 font-medium">
+                        <option>All Augmentations</option>
+                        <option>Rotation</option>
+                        <option>Gaussian Noise</option>
+                        <option>Brightness Shift</option>
+                        <option>Flip Horizontal</option>
+                    </select>
+                </div>
+                <div
+                    class="flex items-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-1.5 gap-2">
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Sort:</span>
+                    <select class="bg-transparent border-none text-sm p-50 focus:ring-0 font-medium">
+                        <option>Newest First</option>
+                        <option>Randomized</option>
+                        <option>Oldest First</option>
+                    </select>
+                </div>
+                <button
+                    class="bg-primary text-white rounded-lg px-4 py-2 text-sm font-medium hover:bg-primary/90 transition-all flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">download</span>
+                    Export Selected
+                </button>
+            </div>
+        </div>
+        <!-- Image Gallery Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+            <!-- Gallery Item 1 -->
+            <div
+                class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 transition-all hover:shadow-xl hover:shadow-primary/5 image-card">
+                <div class="aspect-square w-full relative">
+                    <img class="w-full h-full object-cover" data-alt="Augmented hand gesture photo pointing right"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Qe57jvPRA_0kXB0LtKkz0JSCGeHO3pTgVJJY2IJe0e3H_HftSzXQGmw1r28wINQd9R6avyO5Xq04Hf4bEAXVRHRO1EfM8-oTLZ66iMVddbX4LJl4g3swibSB8UD5M99sdBmh0RXYYsZgKSguRyXHadyKDy95mNGFyRLPrBQM7YvzuMj4tIpnOY9vLmYlguBTvVLG9GLF8DM-04b1vi3a6HhheIgYneSZuBQ5tNg7oijLOAzFkn6nJ03kZm_00LbNF_YtfAwwNE6T" />
+                    <div
+                        class="absolute top-2 left-2 px-2 py-1 bg-black/60 backdrop-blur-md rounded-md text-[10px] font-bold text-white uppercase tracking-tight border border-white/20">
+                        Rotated 15°
+                    </div>
+                    <!-- Hover Overlay -->
+                    <div
+                        class="overlay absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 transition-opacity duration-300 flex items-center justify-center gap-3">
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+                            title="View Original">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+                            title="Download">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-3 border-t border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">HG_0492_AUG.jpg</p>
+                        <span class="text-[10px] text-slate-400 font-mono">ID: 492</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Point Right</p>
+                </div>
+            </div>
+            <!-- Gallery Item 2 -->
+            <div
+                class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 transition-all hover:shadow-xl hover:shadow-primary/5 image-card">
+                <div class="aspect-square w-full relative">
+                    <img class="w-full h-full object-cover" data-alt="Augmented open palm with gaussian noise"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMokn8HyRkLEZFfnlX1k8dVKRfG3EVrwrYU2Sw35IzHQz43F_87UitESx-V1Y2jYLkxa9E5mNfdLdVaqixgwR5owOBvF-SqlzRYek0xRyVWFaW2ARsYv99Y1vd-Pay9XlNBDcFCJX14R1qffHsDavFx_JfmrOd9kkmY40sCSef7nrZTDgbZIC5n7rCfpOoHvhf4AUOLN513cF4nZN2KFWCT8JDo06oK-UROiccX4-EjA7l7ZUp5h2kyp8pc6HMIAiVWPgqUwCC52EK" />
+                    <div
+                        class="absolute top-2 left-2 px-2 py-1 bg-black/60 backdrop-blur-md rounded-md text-[10px] font-bold text-white uppercase tracking-tight border border-white/20">
+                        Noise 5%
+                    </div>
+                    <div
+                        class="overlay absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 transition-opacity duration-300 flex items-center justify-center gap-3">
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-3 border-t border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">HG_0811_AUG.jpg</p>
+                        <span class="text-[10px] text-slate-400 font-mono">ID: 811</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Open Palm</p>
+                </div>
+            </div>
+            <!-- Gallery Item 3 -->
+            <div
+                class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 transition-all hover:shadow-xl hover:shadow-primary/5 image-card">
+                <div class="aspect-square w-full relative">
+                    <img class="w-full h-full object-cover" data-alt="Augmented hand gesture thumbs up flipped"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1JU-kFdKk54OHjRQVGIiGRfCaFT7nNjTw-t13MtRNDw4ly-W2B0P-1jo03o9blHQqTyCV18Dfh2WstXyL0J3uSREn8keonkU4Gl4rP5x-juSxstStHZ_ofW6ICgh-7F1ilz5VuagmzbDw8R9-Sv6GU9Eg6RECNKbp4OOqCir5CAA6qVVYpdMOEs3gbTLIYkR_TtgI7z5pyY-K6QlMVJJOj3T_h-x0kqiEMyzi3sz_5Wd10HONpBRovzk52hSb_KVOACv_KWrI9Fi_" />
+                    <div
+                        class="absolute top-2 left-2 px-2 py-1 bg-black/60 backdrop-blur-md rounded-md text-[10px] font-bold text-white uppercase tracking-tight border border-white/20">
+                        Flipped H
+                    </div>
+                    <div
+                        class="overlay absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 transition-opacity duration-300 flex items-center justify-center gap-3">
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-3 border-t border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">HG_1102_AUG.jpg</p>
+                        <span class="text-[10px] text-slate-400 font-mono">ID: 1102</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Thumbs Up</p>
+                </div>
+            </div>
+            <!-- Gallery Item 4 -->
+            <div
+                class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 transition-all hover:shadow-xl hover:shadow-primary/5 image-card">
+                <div class="aspect-square w-full relative">
+                    <img class="w-full h-full object-cover" data-alt="Augmented hand gesture brightened"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOKZuSTsSOnsXHPFfz-Upofe6RzNxg0301AaPMAMJJsYeums-beigQzIrD27jStunDGaWb6TDMcY0WSDtMYBMbmIYQ3OMD2olSewfLTIChIXAUkt_V2OAml3dy6-6iZeEVwwql2ueBEF5UicufgN3a5TkpaaGE8QxPOQSrcxHfiP8Y8hPbp_rXx947tcuu1iTL9STgY4l57KmVi8ae1K3L01qZHy9tqEr92nVrlKRhTtIqgw7s8aTnGzYDNzQUNlmsZ9E2vhqytI-H" />
+                    <div
+                        class="absolute top-2 left-2 px-2 py-1 bg-black/60 backdrop-blur-md rounded-md text-[10px] font-bold text-white uppercase tracking-tight border border-white/20">
+                        Bright +20%
+                    </div>
+                    <div
+                        class="overlay absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 transition-opacity duration-300 flex items-center justify-center gap-3">
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-3 border-t border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">HG_1255_AUG.jpg</p>
+                        <span class="text-[10px] text-slate-400 font-mono">ID: 1255</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Okay Sign</p>
+                </div>
+            </div>
+            <!-- Gallery Item 5 -->
+            <div
+                class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 transition-all hover:shadow-xl hover:shadow-primary/5 image-card">
+                <div class="aspect-square w-full relative">
+                    <img class="w-full h-full object-cover" data-alt="Augmented hand gesture blurred"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGLJuBTfeFiHpv4NoLSm6uJZAt097pJ_ojOqDaLb5QwPPqgYpNhyUSZxetp3SFQs-C0gIkhcKgrccdj2Lqs7Zjv1EwNZv_9pRNajIuU_Joo6QfwyqnEj8gQNo0tqypSYV2yeNM-EjLcNn1pMd8jvHzzEK8d1Xww_KlW1vPnMBBPXexkw-ipXwB1a7rjGydef-I9IInF1iJnpMByhfRgkWph_DHGCXhe7XsOHj5HTkMETejmyxrsdFwJTi3L_tu65oODoIH1FUMRXGj" />
+                    <div
+                        class="absolute top-2 left-2 px-2 py-1 bg-black/60 backdrop-blur-md rounded-md text-[10px] font-bold text-white uppercase tracking-tight border border-white/20">
+                        Blur 2px
+                    </div>
+                    <div
+                        class="overlay absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 transition-opacity duration-300 flex items-center justify-center gap-3">
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-3 border-t border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">HG_0034_AUG.jpg</p>
+                        <span class="text-[10px] text-slate-400 font-mono">ID: 034</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Peace Sign</p>
+                </div>
+            </div>
+            <!-- Repeated Item for Grid Look -->
+            <div
+                class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 transition-all hover:shadow-xl hover:shadow-primary/5 image-card">
+                <div class="aspect-square w-full relative">
+                    <img class="w-full h-full object-cover" data-alt="Augmented hand gesture zoom 1.2x"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdYtYB9DwbuUaoJASMUPSwqqgMKrO0RRj_6aiDi8xfGs72VaVf9gnGBrtAEHqKJRxxkFCGUB5l9OdgMlHrVGB7KaUp7-DUYS80vXXTYn-4t2aeviFJuHo1o5LP9YHQlMoQVA4xJFt76BxeP9pnoCuwvqnFtXUOGdFPDeeXam5-eUira_-UaMAiT5XJ0lGiIIO_btvVXrkYSejwN7nHnnMaDVz6pjl88dMSYzAtl7CpZw5OMiC8Ej23phvbOTLHl1tvQ_4T5onvvB5b" />
+                    <div
+                        class="absolute top-2 left-2 px-2 py-1 bg-black/60 backdrop-blur-md rounded-md text-[10px] font-bold text-white uppercase tracking-tight border border-white/20">
+                        Zoom 1.2x
+                    </div>
+                    <div
+                        class="overlay absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 transition-opacity duration-300 flex items-center justify-center gap-3">
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-3 border-t border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">HG_0221_AUG.jpg</p>
+                        <span class="text-[10px] text-slate-400 font-mono">ID: 221</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Point Up</p>
+                </div>
+            </div>
+            <!-- More items for filling the view -->
+            <div
+                class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 transition-all hover:shadow-xl hover:shadow-primary/5 image-card">
+                <div class="aspect-square w-full relative">
+                    <img class="w-full h-full object-cover" data-alt="Abstract hand pattern shadow"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD4ySwts3ZxdAYjTgTXPPj_lim-NCblgrFEPxy5cpG5eziDHswo3a0jASTGrQMaT0-DQjTH_0MwY67Mq2Zx3xm02Yj6xmXp1Sru2ioQ1fPP7XEtfH7fIXSBajSQOko4jOUTfU85jupqdMRepx9gGaxapn2mBzHjzDRnAMYNTS9G6bNPbDD3kpRU00ep4QQOYpLSlRDOtiGpkJ7iygXGxV-HLgMHo__7wwIsu-BuKfrIcR_UIbkftpgw6wD7uHjFD_Rxs5sFtaxDey5" />
+                    <div
+                        class="absolute top-2 left-2 px-2 py-1 bg-black/60 backdrop-blur-md rounded-md text-[10px] font-bold text-white uppercase tracking-tight border border-white/20">
+                        Shear 5°
+                    </div>
+                    <div
+                        class="overlay absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 transition-opacity duration-300 flex items-center justify-center gap-3">
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-3 border-t border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">HG_0667_AUG.jpg</p>
+                        <span class="text-[10px] text-slate-400 font-mono">ID: 667</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Fist</p>
+                </div>
+            </div>
+            <!-- Final item -->
+            <div
+                class="group relative bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 transition-all hover:shadow-xl hover:shadow-primary/5 image-card">
+                <div class="aspect-square w-full relative">
+                    <img class="w-full h-full object-cover" data-alt="Augmented hand gesture crop center"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeY13PN7omTKD7A_ydr1QG-L44fwMkbUquQk3MS3Elu7c_1dcGfsF5KvZvHTFRielTKsOtIdtfCU48hCsruXzdJKHIz7TEbP1P3gYAmv8ZztCWN_vWY7LALZeX0hoF4PCmd1ivh4osbEoNmD4sM9kk6Y1ddaLwE_uF1d-CrSmiUKYJJIuhnalx3ovqJLIkb5xOi8ViqjR5yDSX_JmMmVrl02WTKEniNDYO54KLBLovk5Hpdd3di9iTTVyF_wlFIFXMRZpxMiMYqCxu" />
+                    <div
+                        class="absolute top-2 left-2 px-2 py-1 bg-black/60 backdrop-blur-md rounded-md text-[10px] font-bold text-white uppercase tracking-tight border border-white/20">
+                        Crop Center
+                    </div>
+                    <div
+                        class="overlay absolute inset-0 bg-primary/40 backdrop-blur-[2px] opacity-0 transition-opacity duration-300 flex items-center justify-center gap-3">
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                            <span class="material-symbols-outlined">download</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-3 border-t border-slate-100 dark:border-slate-700">
+                    <div class="flex justify-between items-start mb-1">
+                        <p class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">HG_0944_AUG.jpg</p>
+                        <span class="text-[10px] text-slate-400 font-mono">ID: 944</span>
+                    </div>
+                    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Two Fingers</p>
+                </div>
+            </div>
+        </div>
+        <!-- Pagination -->
+        <div class="mt-12 flex items-center justify-between border-t border-slate-200 dark:border-slate-800 pt-6">
+            <div class="text-sm text-slate-500 font-medium">
+                Showing <span class="text-slate-900 dark:text-white">1</span> to <span
+                    class="text-slate-900 dark:text-white">48</span> of <span
+                    class="text-slate-900 dark:text-white">1,240</span> results
+            </div>
+            <div class="flex items-center gap-1">
+                <button
+                    class="p-2 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 disabled:opacity-50">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button
+                    class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+                <button
+                    class="h-10 w-10 flex items-center justify-center rounded-lg border border-transparent hover:border-slate-200 dark:hover:border-slate-700 font-medium">2</button>
+                <button
+                    class="h-10 w-10 flex items-center justify-center rounded-lg border border-transparent hover:border-slate-200 dark:hover:border-slate-700 font-medium">3</button>
+                <span class="px-2 text-slate-400">...</span>
+                <button
+                    class="h-10 w-10 flex items-center justify-center rounded-lg border border-transparent hover:border-slate-200 dark:hover:border-slate-700 font-medium">26</button>
+                <button
+                    class="p-2 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

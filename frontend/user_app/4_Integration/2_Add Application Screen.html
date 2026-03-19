@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Add Application - Hand Gesture Automation</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a227f",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121320",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .console-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .console-scrollbar::-webkit-scrollbar-track {
+            background: #1a227f20;
+        }
+
+        .console-scrollbar::-webkit-scrollbar-thumb {
+            background: #1a227f40;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0f101a]">
+    <div
+        class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation Bar -->
+            <header
+                class="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center h-16 gap-8">
+                        <!-- Logo Section -->
+                        <div class="flex items-center gap-3">
+                            <div class="bg-primary p-1.5 rounded-lg text-white">
+                                <span class="material-symbols-outlined block">back_hand</span>
+                            </div>
+                            <h1 class="text-lg font-bold tracking-tight text-primary">GuestureAuto<span
+                                    class="text-slate-500 font-normal"></span></h1>
+                        </div>
+                        <!-- Desktop Navigation Links -->
+                        <nav class="hidden md:flex space-x-8">
+                            <a class="text-slate-500 hover:text-primary dark:hover:text-white px-1 py-2 text-sm font-medium transition-colors"
+                                href="E:\Workspace\All Projects\New UI Project\My Project\GuestureAuto\User\1_Dashboard and Profile\User Dashboard Screen.html">Dashboard</a>
+                            <a class="text-slate-500 hover:text-primary dark:hover:text-white px-1 py-2 text-sm font-medium transition-colors"
+                                href="E:\Workspace\All Projects\New UI Project\My Project\GuestureAuto\User\4_Integration\1_Apllications Integration Screen.html">Connected Apps</a>
+                            <a class="text-primary dark:text-white border-b-2 border-primary px-1 py-2 text-sm font-semibold"
+                                href="#">Add Application</a>
+                        </nav>
+
+                    </div>
+                </div>
+            </header>
+            <!-- Main Content Section -->
+            <main class="flex-1 flex flex-col max-w-[1200px] mx-auto w-full px-6 py-6 gap-6">
+                <!-- System Application Scanner Section -->
+                <section class="bg-white rounded-xl border border-[#e9e9f2] p-6 shadow-sm">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                        <div>
+                            <h2 class="text-xl font-bold text-[#0f101a]">System Application Scanner</h2>
+                            <p class="text-[#555a91] text-sm">Find local applications compatible with hand gesture
+                                automation.</p>
+                        </div>
+                        <div class="flex gap-3 w-full md:w-auto">
+                            <div class="relative flex-1 md:w-64">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#555a91] text-xl">search</span>
+                                <input
+                                    class="w-full pl-10 pr-4 py-2 bg-background-light border-[#d2d4e5] rounded-lg text-sm focus:ring-primary focus:border-primary"
+                                    placeholder="Search local apps..." type="text" />
+                            </div>
+                            <button
+                                class="flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all">
+                                <span class="material-symbols-outlined text-lg">refresh</span>
+                                Rescan System
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <!-- Application Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- App Card: Adobe Photoshop -->
+                    <div
+                        class="bg-white p-5 rounded-xl border border-[#e9e9f2] shadow-sm hover:border-primary/50 transition-all flex flex-col items-center text-center group">
+                        <div
+                            class="size-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                            <span class="material-symbols-outlined text-4xl text-blue-600">brush</span>
+                        </div>
+                        <h3 class="font-bold text-[#0f101a] mb-1">Adobe Photoshop</h3>
+                        <p class="text-xs text-[#555a91] mb-4">v2024.1 detected</p>
+                        <button
+                            class="w-full py-2 bg-background-light hover:bg-primary hover:text-white border border-[#d2d4e5] rounded-lg text-sm font-bold transition-all text-primary">
+                            Connect
+                        </button>
+                    </div>
+                    <!-- App Card: Google Chrome -->
+                    <div
+                        class="bg-white p-5 rounded-xl border border-[#e9e9f2] shadow-sm hover:border-primary/50 transition-all flex flex-col items-center text-center group">
+                        <div
+                            class="size-16 rounded-2xl bg-orange-50 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                            <span class="material-symbols-outlined text-4xl text-orange-500">language</span>
+                        </div>
+                        <h3 class="font-bold text-[#0f101a] mb-1">Google Chrome</h3>
+                        <p class="text-xs text-[#555a91] mb-4">v122.0 detected</p>
+                        <button
+                            class="w-full py-2 bg-background-light hover:bg-primary hover:text-white border border-[#d2d4e5] rounded-lg text-sm font-bold transition-all text-primary">
+                            Connect
+                        </button>
+                    </div>
+                    <!-- App Card: Zoom -->
+                    <div
+                        class="bg-white p-5 rounded-xl border border-[#e9e9f2] shadow-sm hover:border-primary/50 transition-all flex flex-col items-center text-center group">
+                        <div
+                            class="size-16 rounded-2xl bg-sky-50 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                            <span class="material-symbols-outlined text-4xl text-sky-500">video_call</span>
+                        </div>
+                        <h3 class="font-bold text-[#0f101a] mb-1">Zoom Meetings</h3>
+                        <p class="text-xs text-[#555a91] mb-4">v5.17.5 detected</p>
+                        <button
+                            class="w-full py-2 bg-background-light hover:bg-primary hover:text-white border border-[#d2d4e5] rounded-lg text-sm font-bold transition-all text-primary">
+                            Connect
+                        </button>
+                    </div>
+                    <!-- App Card: Visual Studio Code -->
+                    <div
+                        class="bg-white p-5 rounded-xl border border-[#e9e9f2] shadow-sm hover:border-primary/50 transition-all flex flex-col items-center text-center group">
+                        <div
+                            class="size-16 rounded-2xl bg-indigo-50 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                            <span class="material-symbols-outlined text-4xl text-indigo-600">code</span>
+                        </div>
+                        <h3 class="font-bold text-[#0f101a] mb-1">VS Code</h3>
+                        <p class="text-xs text-[#555a91] mb-4">v1.86.0 detected</p>
+                        <button
+                            class="w-full py-2 bg-background-light hover:bg-primary hover:text-white border border-[#d2d4e5] rounded-lg text-sm font-bold transition-all text-primary">
+                            Connect
+                        </button>
+                    </div>
+                    <!-- App Card: Spotify -->
+                    <div
+                        class="bg-white p-5 rounded-xl border border-[#e9e9f2] shadow-sm hover:border-primary/50 transition-all flex flex-col items-center text-center group">
+                        <div
+                            class="size-16 rounded-2xl bg-green-50 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                            <span class="material-symbols-outlined text-4xl text-green-600">music_note</span>
+                        </div>
+                        <h3 class="font-bold text-[#0f101a] mb-1">Spotify</h3>
+                        <p class="text-xs text-[#555a91] mb-4">v1.2.32 detected</p>
+                        <button
+                            class="w-full py-2 bg-background-light hover:bg-primary hover:text-white border border-[#d2d4e5] rounded-lg text-sm font-bold transition-all text-primary">
+                            Connect
+                        </button>
+                    </div>
+                    <!-- App Card: Slack -->
+                    <div
+                        class="bg-white p-5 rounded-xl border border-[#e9e9f2] shadow-sm hover:border-primary/50 transition-all flex flex-col items-center text-center group">
+                        <div
+                            class="size-16 rounded-2xl bg-purple-50 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                            <span class="material-symbols-outlined text-4xl text-purple-600">forum</span>
+                        </div>
+                        <h3 class="font-bold text-[#0f101a] mb-1">Slack</h3>
+                        <p class="text-xs text-[#555a91] mb-4">v4.36.0 detected</p>
+                        <button
+                            class="w-full py-2 bg-background-light hover:bg-primary hover:text-white border border-[#d2d4e5] rounded-lg text-sm font-bold transition-all text-primary">
+                            Connect
+                        </button>
+                    </div>
+                    <!-- App Card: Microsoft Teams -->
+                    <div
+                        class="bg-white p-5 rounded-xl border border-[#e9e9f2] shadow-sm hover:border-primary/50 transition-all flex flex-col items-center text-center group">
+                        <div
+                            class="size-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                            <span class="material-symbols-outlined text-4xl text-blue-800">groups</span>
+                        </div>
+                        <h3 class="font-bold text-[#0f101a] mb-1">Teams</h3>
+                        <p class="text-xs text-[#555a91] mb-4">v2.0 detected</p>
+                        <button
+                            class="w-full py-2 bg-background-light hover:bg-primary hover:text-white border border-[#d2d4e5] rounded-lg text-sm font-bold transition-all text-primary">
+                            Connect
+                        </button>
+                    </div>
+                    <!-- Manual Integration Card -->
+                    <div
+                        class="bg-primary/5 border-2 border-dashed border-primary/30 p-5 rounded-xl flex flex-col items-center text-center justify-center cursor-pointer hover:bg-primary/10 hover:border-primary transition-all group">
+                        <div
+                            class="size-12 rounded-full bg-white flex items-center justify-center mb-3 shadow-sm text-primary">
+                            <span
+                                class="material-symbols-outlined text-2xl group-hover:scale-110 transition-transform">upload_file</span>
+                        </div>
+                        <h3 class="font-bold text-primary mb-1">Manual Integration</h3>
+                        <p class="text-xs text-[#555a91]">Browse for .exe path manually if not listed above</p>
+                    </div>
+                </div>
+                <!-- Live Connection Console -->
+                <section class="mt-4">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">terminal</span>
+                            <h3 class="text-sm font-bold text-[#0f101a] uppercase tracking-wider">Live Connection
+                                Console</h3>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="text-[#555a91] hover:text-primary"><span
+                                    class="material-symbols-outlined text-lg">delete</span></button>
+                            <button class="text-[#555a91] hover:text-primary"><span
+                                    class="material-symbols-outlined text-lg">expand_content</span></button>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-[#121320] rounded-xl border border-[#1a227f40] p-4 h-48 console-scrollbar overflow-y-auto font-mono text-sm shadow-inner">
+                        <div class="flex flex-col gap-1.5">
+                            <div class="flex gap-3">
+                                <span class="text-[#555a91]">[10:15:02]</span>
+                                <span class="text-[#76e5b1]">INF:</span>
+                                <span class="text-[#e9e9f2]">Application scanner initialized...</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="text-[#555a91]">[10:15:04]</span>
+                                <span class="text-[#76e5b1]">INF:</span>
+                                <span class="text-[#e9e9f2]">Scanning C:/Program Files (x86)/...</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="text-[#555a91]">[10:15:10]</span>
+                                <span class="text-[#f9d423]">WRN:</span>
+                                <span class="text-[#e9e9f2]">Skipping 'System32' protected directory</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="text-[#555a91]">[10:15:12]</span>
+                                <span class="text-[#76e5b1]">INF:</span>
+                                <span class="text-[#e9e9f2]">Adobe Photoshop v2024.1 detected at
+                                    C:/Adobe/Photoshop.exe</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="text-[#555a91]">[10:15:12]</span>
+                                <span class="text-[#76e5b1]">INF:</span>
+                                <span class="text-[#e9e9f2]">Spotify v1.2.32 detected at
+                                    C:/Users/App/Local/Spotify/Spotify.exe</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="text-[#555a91]">[10:15:15]</span>
+                                <span class="text-[#76e5b1]">INF:</span>
+                                <span class="text-[#e9e9f2]">Visual Studio Code detected via system environment
+                                    path</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <span class="text-[#555a91]">[10:15:20]</span>
+                                <span class="text-primary font-bold">&gt;&gt;&gt;</span>
+                                <span class="text-white italic">Ready for manual input or integration request...</span>
+                            </div>
+                            <div class="flex gap-3 animate-pulse">
+                                <span class="text-[#555a91]">[10:15:45]</span>
+                                <span class="text-[#76e5b1]">INF:</span>
+                                <span class="text-[#e9e9f2]">Monitoring active camera feed for gesture hooks...</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- Bottom Floating Action Bar (Optional but helpful for UX) -->
+            <footer
+                class="fixed bottom-0 left-0 right-0 bg-white/80 backdrop-blur-md border-t border-[#e9e9f2] py-4 px-10 flex justify-between items-center z-40">
+                <div class="flex items-center gap-4">
+                    <p class="text-xs text-[#555a91] font-medium uppercase tracking-widest">Automation Hub v2.4.0</p>
+                </div>
+                <div class="flex gap-4">
+                    <button
+                        class="px-6 py-2 rounded-lg text-sm font-bold text-[#555a91] hover:bg-[#e9e9f2] transition-all">Cancel</button>
+                    <button
+                        class="px-6 py-2 bg-primary text-white rounded-lg text-sm font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">Save
+                        Integrations</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
