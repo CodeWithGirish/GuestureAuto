@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Antigravity (User)",
+        "version": "1.21.6",
+        "icon": "widgets",
+        "status": "Active",
+        "mappings": 0
+    },
+    {
+        "name": "Brave",
+        "version": "146.1.88.136",
+        "icon": "widgets",
+        "status": "Active",
+        "mappings": 0
+    },
+    {
+        "name": "ChatGPT",
+        "version": "1.0",
+        "icon": "widgets",
+        "status": "Active",
+        "mappings": 0
+    },
+    {
+        "name": "Calender",
+        "version": "1.0",
+        "icon": "widgets",
+        "status": "Active",
+        "mappings": 0
+    },
+    {
+        "name": "GitHub",
+        "version": "1.0",
+        "icon": "widgets",
+        "status": "Active",
+        "mappings": 0
+    },
+    {
+        "name": "Google Classroom",
+        "version": "1.0",
+        "icon": "widgets",
+        "status": "Active",
+        "mappings": 0
+    },
+    {
+        "name": "Google Chrome",
+        "version": "146.0.7680.165",
+        "icon": "language",
+        "status": "Active",
+        "mappings": 0
+    }
+]

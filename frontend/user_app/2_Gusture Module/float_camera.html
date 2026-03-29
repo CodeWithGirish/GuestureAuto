@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+
+        #feed {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="feed" class="w-full h-full object-cover" src="" />
+    <div class="absolute top-1 right-1">
+        <button onclick="window.close()" class="text-white bg-black/50 rounded-full p-1 hover:bg-red-500">
+            <span class="material-symbols-outlined text-xs">close</span>
+        </button>
+    </div>
+    <script>
+        // This function must be named exactly 'updateFrame' to match the Python call
+        function updateFrame(imageSrc) {
+            const feed = document.getElementById('feed');
+            if (feed) {
+                feed.src = imageSrc;
+            }
+        }
+    </script>
+</body>
+
+</html>

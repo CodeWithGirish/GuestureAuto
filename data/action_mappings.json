@@ -1,0 +1,47 @@
+[
+    {
+        "gesture_name": "good",
+        "mapping_mode": "System Level",
+        "system_category": "Mouse Control",
+        "target_app": "Global",
+        "action_type": "Double-click",
+        "secondary_app": "None",
+        "detection_delay_ms": 250
+    },
+    {
+        "gesture_name": "left thumb",
+        "mapping_mode": "System Level",
+        "system_category": "Scrolling And Navigation",
+        "target_app": "Global",
+        "action_type": "Scroll Down",
+        "secondary_app": "None",
+        "detection_delay_ms": 250
+    },
+    {
+        "gesture_name": "right thumb",
+        "mapping_mode": "System Level",
+        "system_category": "Media Control",
+        "target_app": "Global",
+        "action_type": "Volume Up",
+        "secondary_app": "None",
+        "detection_delay_ms": 250
+    },
+    {
+        "gesture_name": "Plaam",
+        "mapping_mode": "Application Level",
+        "system_category": "",
+        "target_app": "Antigravity (User)",
+        "action_type": "Macro Chain",
+        "secondary_app": "None",
+        "detection_delay_ms": 250
+    },
+    {
+        "gesture_name": "right thumb",
+        "mapping_mode": "Application Level",
+        "system_category": "",
+        "target_app": "Calender",
+        "action_type": "Macro Chain",
+        "secondary_app": "None",
+        "detection_delay_ms": 250
+    }
+]

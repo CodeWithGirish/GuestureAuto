@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dataset Overview</title>
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1a227f",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#121320",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 font-display min-h-screen">
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-[1440px] mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-3 text-primary">
+                    <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined text-xl">layers</span>
+                    </div>
+                    <h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">GuestureAuto</h1>
+                </div>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="..\1_admin_dashboard\Admin Dashboard Screen.html">Dashboard</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors border-b-2 border-primary pb-1 pt-1" href="#">Dataset Hub</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        href="..\3_Model Training\1_Model_Configration\Model Configration Screen.html">Model Training</a>
+                    <a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="..\5_deployment_&_version_control\Deploy Version Screen.html">Deployments</a>
+
+                </nav>
+            </div>
+            <!-- Actions & Profile -->
+            <div class="flex items-center gap-4">
+                <div class="h-8 w-px bg-slate-200 dark:bg-slate-700"></div>
+                <div class="flex items-center gap-3 ml-2 cursor-pointer group">
+                    <div class="size-9 rounded-full bg-slate-200 overflow-hidden border border-slate-200">
+                        <img alt="Profile" class="w-full h-full object-cover"
+                            data-alt="Portrait of a professional ML researcher"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTt8V4eQVjA9lvtEpDuQDkLU10eshiSR3m167zH__Z9n_2MCcie4BjvKARyDFOl-a8rofCvSoYhL40vMoFt0FmxCXozXN2B7TjOu4044VOxIex560sfML5uOZ85-xu8k85rpTW5Sp-4OXlrsMnPd_vee6TkT-fBCJEWP-jlVIjnuIyZXyKFluKF3oNXzKFYiir4Xdk_l4L7MLHNVPA_YQYrN4IRRJGp9uiTvuaAyuhw-Iw_7vwux0WxOe6ttjn8HbJQZx0qxpsRMRM" />
+                    </div>
+                    <div class="hidden lg:block text-left leading-tight">
+                        <p
+                            class="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                            Dr. Aris Thorne</p>
+                        <p class="text-xs text-slate-500">Admin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-[1440px] mx-auto p-6 space-y-6">
+        <!-- Header & Tabs -->
+        <div class="mb-8">
+
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Gesture Synthesis Dataset</h2>
+            </div>
+            <!-- Integrated Toggle Tabs -->
+            <div class="border-b border-slate-200 dark:border-slate-800">
+                <nav aria-label="Tabs" class="flex gap-8">
+                    <a class="border-b-2 border-primary py-4 px-1 text-sm font-bold text-primary flex items-center gap-2"
+                        href="#">
+                        <span class="material-symbols-outlined text-lg">dashboard</span>Dataset Overview </a>
+                    <a class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300 flex items-center gap-2"
+                        href="..\2_preview_gallery\Preview Gallary Screen.html">
+                        <span class="material-symbols-outlined text-lg">photo_library</span>Priview Gallary</a>
+                    <a class="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-slate-500 hover:text-slate-700 hover:border-slate-300 flex items-center gap-2"
+                        href="..\3_batch_augmentation\Batch Augumentation Screen.html">
+                        <span class="material-symbols-outlined text-lg">monitoring</span>Augumentation</a>
+                </nav>
+            </div>
+        </div>
+        <!-- Summary Cards Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <!-- Total Samples -->
+            <div
+                class="bg-white dark:bg-background-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-medium text-slate-500 uppercase tracking-wider">Total Samples</span>
+                    <div class="bg-primary/10 p-2 rounded-lg text-primary">
+                        <span class="material-symbols-outlined text-lg">stacks</span>
+                    </div>
+                </div>
+                <div class="flex items-end gap-2">
+                    <p class="text-3xl font-bold text-slate-900">45,200</p>
+                    <span class="text-emerald-600 text-sm font-bold flex items-center mb-1">
+                        <span class="material-symbols-outlined text-base">arrow_upward</span> 2.4%
+                    </span>
+                </div>
+            </div>
+            <!-- Class Balance Score -->
+            <div
+                class="bg-white dark:bg-background-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-medium text-slate-500 uppercase tracking-wider">Class Balance
+                        Score</span>
+                    <div class="bg-primary/10 p-2 rounded-lg text-primary">
+                        <span class="material-symbols-outlined text-lg">balance</span>
+                    </div>
+                </div>
+                <div class="flex items-end gap-2">
+                    <p class="text-3xl font-bold text-slate-900">92%</p>
+                    <span class="text-emerald-600 text-sm font-bold flex items-center mb-1">
+                        <span class="material-symbols-outlined text-base">arrow_upward</span> 0.5%
+                    </span>
+                </div>
+            </div>
+            <!-- Resolution Consistency -->
+            <div
+                class="bg-white dark:bg-background-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-medium text-slate-500 uppercase tracking-wider">Resolution</span>
+                    <div class="bg-primary/10 p-2 rounded-lg text-primary">
+                        <span class="material-symbols-outlined text-lg">aspect_ratio</span>
+                    </div>
+                </div>
+                <div class="flex items-end gap-2">
+                    <p class="text-3xl font-bold text-slate-900">1080p</p>
+                    <span class="text-slate-400 text-sm font-medium mb-1 italic">Consistent</span>
+                </div>
+            </div>
+            <!-- Flagged Images -->
+            <div
+                class="bg-white dark:bg-background-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-medium text-slate-500 uppercase tracking-wider">Flagged Images</span>
+                    <div class="bg-red-50 p-2 rounded-lg text-red-600">
+                        <span class="material-symbols-outlined text-lg">flag</span>
+                    </div>
+                </div>
+                <div class="flex items-end gap-2">
+                    <p class="text-3xl font-bold text-slate-900">124</p>
+                    <span class="text-red-600 text-sm font-bold flex items-center mb-1">
+                        <span class="material-symbols-outlined text-base">arrow_upward</span> 12%
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Distribution Chart Section -->
+        <div
+            class="bg-white dark:bg-background-dark p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm mb-8">
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900">Samples per Gesture Class</h3>
+                    <p class="text-sm text-slate-500">Distribution of the current dataset across identified classes
+                    </p>
+                </div>
+                <button class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">
+                    View full report <span class="material-symbols-outlined text-base">open_in_new</span>
+                </button>
+            </div>
+            <div class="space-y-6">
+                <!-- Chart Rows -->
+                <div class="space-y-4">
+                    <!-- Class 1 -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2 text-sm font-medium">
+                            <span class="text-slate-700">Open Palm</span>
+                            <span class="text-slate-900 font-bold">12,400 samples</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-primary h-full rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <!-- Class 2 -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2 text-sm font-medium">
+                            <span class="text-slate-700">Thumbs Up</span>
+                            <span class="text-slate-900 font-bold">10,120 samples</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-primary/80 h-full rounded-full" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <!-- Class 3 -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2 text-sm font-medium">
+                            <span class="text-slate-700">Victory Sign</span>
+                            <span class="text-slate-900 font-bold">9,480 samples</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-primary/70 h-full rounded-full" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <!-- Class 4 -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2 text-sm font-medium">
+                            <span class="text-slate-700">Closed Fist</span>
+                            <span class="text-slate-900 font-bold">8,200 samples</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-primary/60 h-full rounded-full" style="width: 55%"></div>
+                        </div>
+                    </div>
+                    <!-- Class 5 -->
+                    <div>
+                        <div class="flex items-center justify-between mb-2 text-sm font-medium text-amber-600">
+                            <span class="flex items-center gap-1">Swipe Left <span
+                                    class="material-symbols-outlined text-xs">warning</span></span>
+                            <span class="font-bold">5,000 samples</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                            <div class="bg-amber-400 h-full rounded-full" style="width: 35%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Recent Activity List -->
+        <div
+            class="bg-white dark:bg-background-dark rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between">
+                <h3 class="text-lg font-bold text-slate-900">Recent Dataset Activity</h3>
+                <span class="text-xs bg-slate-100 px-2 py-1 rounded text-slate-500 font-semibold uppercase">Last 24
+                    Hours</span>
+            </div>
+            <div class="divide-y divide-slate-100">
+                <!-- Activity Item 1 -->
+                <div class="px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="size-10 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                            <span class="material-symbols-outlined">cloud_upload</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">New batch uploaded</p>
+                            <p class="text-xs text-slate-500">2,400 images added to 'Open Palm' by <span
+                                    class="text-primary font-medium">J. Smith</span></p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs font-semibold text-slate-900">14:32 PM</p>
+                        <span
+                            class="inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800">Completed</span>
+                    </div>
+                </div>
+                <!-- Activity Item 2 -->
+                <div class="px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                    <div class="flex items-center gap-4">
+                        <div class="size-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center">
+                            <span class="material-symbols-outlined">rule</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">Validation complete</p>
+                            <p class="text-xs text-slate-500">Automated QA finished for version 4.1.9</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs font-semibold text-slate-900">11:15 AM</p>
+                        <span
+                            class="inline-flex items-center rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-800">Verified</span>
+                    </div>
+                </div>
+                <!-- Activity Item 3 -->
+                <div class="px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                    <div class="flex items-center gap-4">
+                        <div class="size-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center">
+                            <span class="material-symbols-outlined">flag</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">Images flagged</p>
+                            <p class="text-xs text-slate-500">12 images marked for low resolution by <span
+                                    class="text-primary font-medium">System Bot</span></p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs font-semibold text-slate-900">09:45 AM</p>
+                        <span
+                            class="inline-flex items-center rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-800">Pending
+                            Review</span>
+                    </div>
+                </div>
+                <!-- Activity Item 4 -->
+                <div class="px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors">
+                    <div class="flex items-center gap-4">
+                        <div class="size-10 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center">
+                            <span class="material-symbols-outlined">history</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">Dataset Backup</p>
+                            <p class="text-xs text-slate-500">Incremental backup stored in S3 bucket us-east-1</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-xs font-semibold text-slate-900">Yesterday</p>
+                        <span
+                            class="inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-600">Archived</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-50 px-6 py-3 text-center">
+                <button class="text-sm font-bold text-primary hover:text-primary/80">View all activity</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
